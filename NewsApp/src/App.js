@@ -10,7 +10,7 @@ import banner_data from './news_banner_data.json'
 function App(){
 
     const renderNews = ({item}) => <NewsCard news = {item}/>
-    const keyExtractorNews = (item) => item.u_id.toString()
+    
     return(
         <SafeAreaView  style={styles.container}>
             <Text style={styles.title}>NEWS</Text>
@@ -26,7 +26,7 @@ function App(){
                 }
                     data={news_data}
                     renderItem={renderNews}
-                    keyExtractor={keyExtractorNews}
+                   
                 />
         </SafeAreaView>
     );
